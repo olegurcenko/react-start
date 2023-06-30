@@ -1,0 +1,21 @@
+.nav{
+    background-color: #3f88c5;
+    grid-area: n;
+    padding: 10px;
+    height: fit-content;
+  }
+  .item a{
+    color: aliceblue;
+    text-decoration: none;
+  }
+  
+  .item a:hover{
+    color: rgb(212, 214, 215);
+  }
+
+  /* .item2{
+    font-size: 24px;
+  }
+  .item3{
+    text-decoration: underline;
+  } */

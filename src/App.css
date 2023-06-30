@@ -8,45 +8,17 @@ body{
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-template-areas: 'h h'
-  'n c';
+  'n c'
+  'f f';
   grid-gap: 10px;
 }
-
-.header{
-  grid-area: h;
-  background-color: #393E41;
-}
-.header img{
-  height: 50px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-
-}
-
-.nav-aside{
-  background-color: #3f88c5;
-  grid-area: n;
-  padding: 10px;
-}
-.nav-aside a{
-  color: aliceblue;
-  text-decoration: none;
-}
-
-.nav-aside a:hover{
-  color: rgb(212, 214, 215);
-}
-
-.jungle{
-  width: 100%;
-}
-
-.google{
-  width: 20%;
-}
-
-.content{
-  background-color: #44bba4;
+.appWrapperContent{
   grid-area: c;
+  background-color: #44bba4;
   padding: 10px;
 }
+
+
+
+
+
