@@ -1,0 +1,12 @@
+.profilInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar{
+    max-height: 100px;
+}
+.name{
+    font-size: 36px;
+    font-weight: 600;
+}

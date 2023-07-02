@@ -1,4 +1,22 @@
 .dialogs{
     /* grid-area: c; */
     /* background-color: #44bba4; */
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    height: 100%;
+}
+.dialogsItems{
+    margin-right: 10px;
+}
+
+
+.messages{
+    background-color: #f6f7bd;
+    padding: 10px;
+}
+
+.activeDialog{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+
 }
