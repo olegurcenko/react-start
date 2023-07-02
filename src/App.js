@@ -23,15 +23,13 @@ const App = () => {
         <Header />
         <Nav />
         <div className='appWrapperContent'>
-          {/* <Dialogs/> */}
           <Routes>
           <Route path='/dialogs' Component={Dialogs} />
-          <Route path='/content' Component={Content} />
+          <Route path='/' Component={Content} />
           <Route path='/news' Component={News} />
           <Route path='/music' Component={Music} />
           <Route path='/settings' Component={Settings} />
           </Routes>
-          {/* <Content/> */}
         </div>
         <Footer />
       </div>
