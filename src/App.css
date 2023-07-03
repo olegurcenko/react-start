@@ -1,5 +1,6 @@
 body{
-  background-color: #F6F7EB;
+  /* background-color: #F6F7EB; */
+  background-color: rgb(62, 62, 62);
 }
 .app-wrapper{
   margin: 0 auto;

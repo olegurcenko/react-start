@@ -1,57 +1,9 @@
 import React from "react";
 import s from './dialogs.module.css';
-import { DialogItem } from "./dialog";
-import { Message } from "./message";
+import { dialogsElems } from "./dialogCreator";
+import { messageElems } from "./messageCreator";
 
 export const Dialogs = (props) => {
-
-    let dialogsData = [
-        {
-            id: '0',
-            name: 'Ivan',
-            key: 0,
-        },
-        {
-            id: '1',
-            name: 'Sveta',
-            key: 1, 
-        },
-        {
-            id: '2',
-            name: 'Vlad',
-            key: 2,
-        },
-        {
-            id: '3',
-            name: 'Nikita',
-            key: 3,
-        },
-        {
-            id: '4',
-            name: 'Seva',
-            key: 4,
-        },
-    ];
-
-    let dialogsElems = dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name}/>);
-
-    let messageData = [
-        {
-            id: 0,
-            text: 'Hi',
-        },
-        {
-            id: 1,
-            text: 'How are you?',
-        },
-        {
-            id: 2,
-            text: 'yo',
-        },
-    ]
-
-    let messageElems = messageData.map(message => <Message text={message.text}/>)
-
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>

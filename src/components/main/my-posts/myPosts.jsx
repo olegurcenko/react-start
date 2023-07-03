@@ -1,14 +1,11 @@
 import React from "react";
 import s from './myPosts.module.css';
 import { Post } from "./post/post";
-import { postsData } from "./post/postsData";
+// import { postsData } from "./post/postsData";
 
 
-export const MyPosts = () => {
-
-  
-
-  let postElems = postsData.map(postInfo => <Post text={postInfo.text} imgLink={postInfo.imgLink} likesCount={postInfo.likesCount}/>)
+export const MyPosts = (props) => {
+  let postElems = props.posts.map(postInfo => <Post text={postInfo.text} imgLink={postInfo.imgLink} likesCount={postInfo.likesCount}/>)
 
   return (
     <div className={s.content}>

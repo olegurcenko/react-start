@@ -7,7 +7,7 @@ const setActive = ({isActive}) => isActive ? s.activeLink : '';
 export const DialogItem = (props) => {
     return (
         <div className={s.dialog}>
-                    <Link className={setActive} to={'/dialogs/' + props.id}>{props.name}</Link>
-                    </div>
+            <Link className={setActive} to={'/dialogs/' + props.id}>{props.name}</Link>
+        </div>
     )
 }

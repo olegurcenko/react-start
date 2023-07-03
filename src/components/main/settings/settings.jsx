@@ -4,7 +4,7 @@ import s from './settings.module.css';
 export const Settings = (props) => {
     return ( 
         <div>
-            Settings
+            Settings, props = ({props.text})
         </div>
     )
 }

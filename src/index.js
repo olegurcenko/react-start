@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { postsData } from './components/main/my-posts/post/postsData';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+
 root.render(
   <React.StrictMode>
-    <App />
+    <App posts={postsData}/>
   </React.StrictMode>
 );
 // document.getElementById('btnAdd').addEventListener('click', () => 
