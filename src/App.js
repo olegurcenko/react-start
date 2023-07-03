@@ -23,24 +23,24 @@ const App = (props) => {
   return (
     <div className='app-wrapper'>
       <Header />
-        <Nav />
-        <div className='appWrapperContent'>
-          <Routes>
-            <Route path='/dialogs'
-              element={<Dialogs  state={props.state.messagesPage}/>} />
-              {/* dialogsData={props.state.messagesPage.dialogsData} messageData={props.state.messagesPage.messageData} */}
-            <Route path='/profile'
-              element={<Content posts={props.state.profilePage} />} />
-            <Route path='/news'
-              element={<News />} />
-            {/* <Route path='/music' Component={Music} /> */}
-            {/* <Route path='/settings' Component={Settings} /> */}
+      <Nav />
+      <div className='appWrapperContent'>
+        <Routes>
+          <Route path='/dialogs'
+            element={<Dialogs state={props.state.messagesPage} />} />
+          {/* dialogsData={props.state.messagesPage.dialogsData} messageData={props.state.messagesPage.messageData} */}
+          <Route path='/profile'
+            element={<Content posts={props.state.profilePage} addpost={props.addPost} />} />
+          <Route path='/news'
+            element={<News />} />
+          {/* <Route path='/music' Component={Music} /> */}
+          {/* <Route path='/settings' Component={Settings} /> */}
 
-            <Route path='/settings' element={<Settings text='hello' />} />
-            <Route path='/music' element={<Music />} />
-            {/* instead of rendering  */}
-          </Routes>
-        </div>
+          <Route path='/settings' element={<Settings text='hello' />} />
+          <Route path='/music' element={<Music />} />
+          {/* instead of rendering  */}
+        </Routes>
+      </div>
       <Footer />
     </div>
   )

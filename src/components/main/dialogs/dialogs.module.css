@@ -20,3 +20,29 @@
     border-top: 1px solid white;
 
 }
+.messagesBlock{
+    height: 50vh;
+    overflow-x: scroll;
+}
+.messageInputBlock{
+    display: flex;
+    align-items: center;
+}
+.messageInput{
+    min-width: 80%;
+    resize: none;
+    height: 150px !important;
+    font-size: 20px;
+    padding: 10px;
+}
+.messageSendBtn{
+    /* display: none; */
+    width: 20%;
+    height: 150px !important;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: none;
+    background-color: #3e3e3e;
+    color: aliceblue;
+    font-size: 24px;
+}

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 // import { postsData } from './components/main/my-posts/post/postsData';
 // import { dialogsData } from './components/main/dialogs/dialogsData';
 // import { messageData } from './components/main/dialogs/messagesData';
+import { addPost } from './redux/state';
 import { state } from './redux/state';
 import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
     <BrowserRouter>
-      <App state={state} />
+      <App state={state} addPost={addPost}/>
     </BrowserRouter>
   /* </React.StrictMode> */
 );

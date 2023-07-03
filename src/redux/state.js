@@ -87,3 +87,14 @@ export let state = {
     ],
     },
 }
+
+export let addPost = (postMsg) => {
+    debugger;
+    let newPost = {
+        id: 5,
+        text: postMsg,
+        likesCount: 0,
+        imgLink: 'https://img.freepik.com/free-icon/user_318-159711.jpg',
+    };
+    state.profilePage.postsData.push(newPost);
+}
