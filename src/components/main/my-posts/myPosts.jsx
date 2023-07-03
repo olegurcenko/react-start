@@ -5,7 +5,7 @@ import { Post } from "./post/post";
 
 
 export const MyPosts = (props) => {
-  let postElems = props.posts.map(postInfo => <Post text={postInfo.text} imgLink={postInfo.imgLink} likesCount={postInfo.likesCount}/>)
+  let postElems = props.posts.postsData.map(postInfo => <Post text={postInfo.text} imgLink={postInfo.imgLink} likesCount={postInfo.likesCount}/>)
 
   return (
     <div className={s.content}>

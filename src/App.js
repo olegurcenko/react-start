@@ -7,7 +7,7 @@ import { Dialogs } from './components/main/dialogs/dialogs';
 import { News } from './components/main/news/news';
 import { Music } from './components/main/music/music';
 import { Settings } from './components/main/settings/settings';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 // function App() {
 //   return (
@@ -18,29 +18,31 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // }
 
 
-
+// posts={state.postsData} dialogElems={state.dialogsData} messageData={state.messageData}
 const App = (props) => {
   return (
     <div className='app-wrapper'>
-        <Header />
-        <BrowserRouter>
+      <Header />
         <Nav />
         <div className='appWrapperContent'>
           <Routes>
-          <Route path='/dialogs' element={<Dialogs/>} />
-          <Route path='/' element={<Content posts={props.posts}/>} />
-          <Route path='/news' element={<News/>} />
-          {/* <Route path='/music' Component={Music} /> */}
-          {/* <Route path='/settings' Component={Settings} /> */}
+            <Route path='/dialogs'
+              element={<Dialogs  state={props.state.messagesPage}/>} />
+              {/* dialogsData={props.state.messagesPage.dialogsData} messageData={props.state.messagesPage.messageData} */}
+            <Route path='/profile'
+              element={<Content posts={props.state.profilePage} />} />
+            <Route path='/news'
+              element={<News />} />
+            {/* <Route path='/music' Component={Music} /> */}
+            {/* <Route path='/settings' Component={Settings} /> */}
 
-          <Route path='/settings' element={<Settings text='hello'/>} />
-          <Route path='/music' element={<Music/>} />
-           {/* instead of rendering  */}
+            <Route path='/settings' element={<Settings text='hello' />} />
+            <Route path='/music' element={<Music />} />
+            {/* instead of rendering  */}
           </Routes>
         </div>
-    </BrowserRouter>
-        <Footer />
-      </div>
+      <Footer />
+    </div>
   )
 }
 

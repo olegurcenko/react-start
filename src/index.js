@@ -3,16 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { postsData } from './components/main/my-posts/post/postsData';
-
+// import { postsData } from './components/main/my-posts/post/postsData';
+// import { dialogsData } from './components/main/dialogs/dialogsData';
+// import { messageData } from './components/main/dialogs/messagesData';
+import { state } from './redux/state';
+import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 
 root.render(
-  <React.StrictMode>
-    <App posts={postsData}/>
-  </React.StrictMode>
+  // <React.StrictMode>
+    <BrowserRouter>
+      <App state={state} />
+    </BrowserRouter>
+  /* </React.StrictMode> */
 );
 // document.getElementById('btnAdd').addEventListener('click', () => 
 // {console.log(document.getElementById("newPostText").value)})
