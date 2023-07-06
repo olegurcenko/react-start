@@ -47,6 +47,7 @@ export let state = {
             ],
     },
     profilePage: {
+        newPostText: '',
         postsData: [
             {
                 id: 0,
@@ -87,14 +88,31 @@ export let state = {
     ],
     },
 }
+let renderEntireTree = () => {
+    console.log('state changed')
+}
 
-export let addPost = (postMsg) => {
-    debugger;
+export let addPost = () => {
     let newPost = {
         id: 5,
-        text: postMsg,
+        text: state.profilePage.newPostText,
         likesCount: 0,
         imgLink: 'https://img.freepik.com/free-icon/user_318-159711.jpg',
     };
     state.profilePage.postsData.push(newPost);
+    state.profilePage.newPostText = '';
+    renderEntireTree(state);
 }
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    renderEntireTree(state);
+}
+
+
+export const subscribe = (observer) => {
+    renderEntireTree = observer; // patter nobserver 
+}
+
+
+// store - oop object 

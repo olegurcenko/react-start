@@ -12,17 +12,19 @@ export const MyPosts = (props) => {
 
 
   const btnFunc = () => {
-    debugger;
-    let text = newPostInput.current.value; //current return elem
-    props.addpost(text)
+      props.addpost()
   }
 
+  let onPostChange = () => {
+    let text = newPostInput.current.value;
+    props.updateNewPostText(text);  
+  };
 
   return (
     <div className={s.content}>
       <div className={s.newPostBlock}>
         <h1>New Post</h1>
-        <textarea placeholder='New Post' className={s.newPostInput} ref={newPostInput}></textarea>
+        <textarea placeholder='New Post' className={s.newPostInput} ref={newPostInput} value={props.newPostText} onChange={onPostChange}/>
         <button type="button" className={s.btnAdd} id='btnAdd' onClick={btnFunc}>New Post</button>
       </div >
       {/* <Post text={postsData[0].text} imgLink={postsData[0].imgLink} likesCount={postsData[0].likesCount}/>
